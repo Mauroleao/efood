@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 const FooterContainer = styled.footer`
@@ -42,15 +43,15 @@ const Copyright = styled.p`
   color: var(--text-light);
 `
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <FooterContent>
         <Logo>eFood</Logo>
         <SocialLinks>
-          <a href="#facebook" title="Facebook">📘</a>
+          <a href="#facebook" title="Facebook">📚</a>
           <a href="#instagram" title="Instagram">📷</a>
-          <a href="#twitter" title="Twitter">𝕏</a>
+          <a href="#twitter" title="Twitter">𝔉</a>
         </SocialLinks>
         <Copyright>&copy; 2024 eFood. Todos os direitos reservados.</Copyright>
       </FooterContent>

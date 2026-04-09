@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import ProductCard from '../components/ProductCard'
 
@@ -49,7 +50,15 @@ const ProductsContainer = styled.div`
   }
 `
 
-const products = [
+interface Product {
+  id: number
+  title: string
+  description: string
+  price: number
+  image: string
+}
+
+const products: Product[] = [
   {
     id: 1,
     title: 'Pizza Margherita',
@@ -94,7 +103,7 @@ const products = [
   }
 ]
 
-function Restaurant() {
+const Restaurant: React.FC = () => {
   return (
     <div>
       <Banner

@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -72,7 +73,16 @@ const Rating = styled.span`
   color: var(--coral);
 `
 
-function RestaurantCard({ id, image, title, category, rating, deliveryTime }) {
+interface RestaurantCardProps {
+  id: number
+  image: string
+  title: string
+  category: string
+  rating: number
+  deliveryTime: number
+}
+
+const RestaurantCard: React.FC<RestaurantCardProps> = ({ id, image, title, category, rating, deliveryTime }) => {
   return (
     <CardContainer to={`/restaurant/${id}`}>
       <Image src={image} alt={title} />

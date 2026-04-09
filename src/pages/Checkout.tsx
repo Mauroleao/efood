@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 const CheckoutContainer = styled.div`
@@ -33,7 +34,7 @@ const Icon = styled.div`
   margin-bottom: 16px;
 `
 
-function Checkout() {
+const Checkout: React.FC = () => {
   return (
     <CheckoutContainer>
       <Title>Carrinho</Title>

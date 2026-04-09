@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 const HeroContainer = styled.div`
@@ -22,7 +23,7 @@ const Subtitle = styled.p`
   font-weight: 500;
 `
 
-function Hero() {
+const Hero: React.FC = () => {
   return (
     <HeroContainer>
       <Title>Viva experiências gastronômicas</Title>

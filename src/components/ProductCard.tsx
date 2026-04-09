@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import { useState } from 'react'
 
@@ -71,10 +72,18 @@ const Button = styled.button`
   }
 `
 
-function ProductCard({ id, image, title, description, price }) {
-  const [addedToCart, setAddedToCart] = useState(false)
+interface ProductCardProps {
+  id: number
+  image: string
+  title: string
+  description: string
+  price: number
+}
 
-  const handleAddToCart = () => {
+const ProductCard: React.FC<ProductCardProps> = ({ id, image, title, description, price }) => {
+  const [addedToCart, setAddedToCart] = useState<boolean>(false)
+
+  const handleAddToCart = (): void => {
     setAddedToCart(true)
     setTimeout(() => setAddedToCart(false), 2000)
   }

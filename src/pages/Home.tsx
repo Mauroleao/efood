@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import Hero from '../components/Hero'
 import RestaurantCard from '../components/RestaurantCard'
@@ -13,7 +14,16 @@ const Container = styled.div`
   }
 `
 
-const restaurants = [
+interface Restaurant {
+  id: number
+  title: string
+  category: string
+  rating: number
+  deliveryTime: number
+  image: string
+}
+
+const restaurants: Restaurant[] = [
   {
     id: 1,
     title: 'Pizza Dock',
@@ -64,7 +74,7 @@ const restaurants = [
   }
 ]
 
-function Home() {
+const Home: React.FC = () => {
   return (
     <div>
       <Hero />

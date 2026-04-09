@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -18,7 +19,11 @@ const Main = styled.main`
   width: 100%;
 `
 
-function Layout({ children }) {
+interface LayoutProps {
+  children: ReactNode
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Container>
       <Header />
