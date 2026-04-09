@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+# eFood - Aplicação de Delivery de Comida
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma aplicação moderna de delivery de comida construída com **React**, **Styled Components** e **React Router**.
 
-## Available Scripts
+## 🚀 Características
 
-In the project directory, you can run:
+- ✨ Interface moderna e responsiva
+- 🍕 Catálogo de restaurantes
+- 🍔 Cardápio de produtos
+- 🛒 Carrinho de compras
+- 🧭 Navegação entre páginas com React Router
+- 💅 Estilização com Styled Components
 
-### `npm start`
+## 📋 Pré-requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js (v14 ou superior)
+- npm ou yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔧 Instalação
 
-### `npm test`
+1. Clone o repositório:
+```bash
+git clone https://github.com/[seu-usuario]/efood.git
+cd efood
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Instale as dependências:
+```bash
+npm install
+```
 
-### `npm run build`
+## 🎯 Uso
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Desenvolvimento
+Para iniciar o servidor de desenvolvimento:
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A aplicação abrirá em [http://localhost:3000](http://localhost:3000)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Build
+Para criar uma versão otimizada para produção:
+```bash
+npm run build
+```
 
-### `npm run eject`
+### Testes
+Para executar os testes:
+```bash
+npm test
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Estrutura do Projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+├── components/          # Componentes reutilizáveis
+│   ├── Header.jsx       # Cabeçalho da aplicação
+│   ├── Footer.jsx       # Rodapé
+│   ├── Hero.jsx         # Banner principal
+│   ├── Layout.jsx       # Layout principal
+│   ├── RestaurantCard.jsx   # Card do restaurante
+│   └── ProductCard.jsx      # Card do produto
+├── pages/              # Páginas da aplicação
+│   ├── Home.jsx        # Página inicial
+│   ├── Restaurant.jsx  # Página do restaurante
+│   └── Checkout.jsx    # Página do carrinho
+├── routes/             # Configuração de rotas
+│   └── Routes.jsx      # Definição de rotas
+├── styles/             # Estilos globais
+│   └── GlobalStyle.js  # Estilos globais
+└── App.js              # Componente principal
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠 Tecnologias Utilizadas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React** - Biblioteca para construir interfaces
+- **React Router** - Roteamento entre páginas
+- **Styled Components** - CSS-in-JS para estilização
 
-## Learn More
+## 📦 Dependências Principais
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```json
+{
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.x.x",
+  "styled-components": "^5.x.x"
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Deploy
 
-### Code Splitting
+### Opção 1: Vercel
+```bash
+npm install -g vercel
+vercel
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Opção 2: Netlify
+```bash
+npm install -g netlify-cli
+netlify deploy
+```
 
-### Analyzing the Bundle Size
+### Opção 3: GitHub Pages
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📝 Licença
 
-### Making a Progressive Web App
+Este projeto está sob a licença MIT.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 👨‍💻 Autor
 
-### Advanced Configuration
+Desenvolvido como projeto educacional.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🤝 Contribuindo
 
-### Deployment
+Contribuições são bem-vindas! Sinta-se livre para abrir issues e pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Próximos passos:**
+1. Conectar a aplicação a uma API real
+2. Implementar sistema de autenticação
+3. Adicionar funcionalidade de carrinho persistente
+4. Integrar pagamento online
