@@ -1,199 +1,130 @@
-# 🍕 eFood - Plataforma de Delivery
+# eFood - Aplicação de Delivery de Comida
 
-Uma aplicação moderna de delivery de comida desenvolvida com **React**, **TypeScript**, **Redux Toolkit** e **Styled Components**. O projeto oferece uma experiência completa de compra: navegação por restaurantes, visualização de pratos, carrinho inteligente e fluxo de checkout validado em múltiplas etapas.
+Uma aplicação moderna de delivery de comida construída com **React**, **Styled Components** e **React Router**.
 
----
+## 🚀 Características
 
-## ✨ Destaques
+- ✨ Interface moderna e responsiva
+- 🍕 Catálogo de restaurantes
+- 🍔 Cardápio de produtos
+- 🛒 Carrinho de compras
+- 🧭 Navegação entre páginas com React Router
+- 💅 Estilização com Styled Components
 
-- 🏪 Listagem de restaurantes com filtros
-- 🍽️ Cardápio detalhado com descrição de pratos
-- 🛒 Carrinho persistente com Redux
-- 📋 Checkout em 3 etapas (endereço, pagamento, confirmação)
-- ✅ Validação de formulários com Formik + Yup
-- 🚀 API integration com RTK Query
-- 📱 Responsivo para mobile, tablet e desktop
-- ♿ Componentes reutilizáveis e bem estruturados
+## 📋 Pré-requisitos
 
----
+- Node.js (v14 ou superior)
+- npm ou yarn
 
-## 🛠️ Tecnologias
+## 🔧 Instalação
 
-| Tecnologia | Versão | Propósito |
-|-----------|--------|----------|
-| React | 19.2 | Biblioteca UI |
-| TypeScript | 5.9 | Tipagem estática |
-| Vite | 7.2 | Build tool |
-| Redux Toolkit | 2.11 | Estado global |
-| React Router | 7.9 | Roteamento |
-| Styled Components | 6.1 | Estilização |
-| Formik | 2.4 | Gerenciamento de formulários |
-| Yup | 1.7 | Validação de dados |
-
----
-
-## 📦 Pré-requisitos
-
-Antes de começar, você precisa ter instalado:
-
-- **Node.js** (versão 18 ou superior)
-- **npm** (incluído com Node.js)
-
-Para verificar suas versões:
+1. Clone o repositório:
 ```bash
-node --version
-npm --version
-```
-
----
-
-## 🚀 Como Começar
-
-### 1. Clonar o repositório
-
-```bash
-git clone https://github.com/seu-usuario/efood.git
+git clone https://github.com/[seu-usuario]/efood.git
 cd efood
 ```
 
-### 2. Instalar dependências
-
+2. Instale as dependências:
 ```bash
 npm install
 ```
 
-### 3. Iniciar servidor de desenvolvimento
+## 🎯 Uso
 
+### Desenvolvimento
+Para iniciar o servidor de desenvolvimento:
 ```bash
 npm start
 ```
 
-A aplicação abrirá automaticamente em: **http://localhost:5173**
+A aplicação abrirá em [http://localhost:3000](http://localhost:3000)
 
----
+### Build
+Para criar uma versão otimizada para produção:
+```bash
+npm run build
+```
+
+### Testes
+Para executar os testes:
+```bash
+npm test
+```
 
 ## 📁 Estrutura do Projeto
 
 ```
 src/
-├── assets/              # Imagens e ícones
-│   └── images/
-│       ├── Icons/       # Ícones da aplicação
-│       └── Restaurants/ # Imagens de restaurantes
 ├── components/          # Componentes reutilizáveis
-│   ├── Home/           # Componentes da página inicial
-│   ├── Restaurant/     # Componentes da página de restaurante
-│   └── SubComponents/  # Componentes menores
+│   ├── Header.jsx       # Cabeçalho da aplicação
+│   ├── Footer.jsx       # Rodapé
+│   ├── Hero.jsx         # Banner principal
+│   ├── Layout.jsx       # Layout principal
+│   ├── RestaurantCard.jsx   # Card do restaurante
+│   └── ProductCard.jsx      # Card do produto
 ├── pages/              # Páginas da aplicação
-│   ├── Home/
-│   └── Restaurant/
-├── store/              # Configuração Redux
-│   ├── api/            # Endpoints da API
-│   └── slices/         # Redux slices
-├── App.tsx             # Componente raiz
-├── main.tsx            # Ponto de entrada
-└── Routes.tsx          # Configuração de rotas
+│   ├── Home.jsx        # Página inicial
+│   ├── Restaurant.jsx  # Página do restaurante
+│   └── Checkout.jsx    # Página do carrinho
+├── routes/             # Configuração de rotas
+│   └── Routes.jsx      # Definição de rotas
+├── styles/             # Estilos globais
+│   └── GlobalStyle.js  # Estilos globais
+└── App.js              # Componente principal
 ```
 
----
+## 🛠 Tecnologias Utilizadas
 
-## 🎯 Funcionalidades Principais
+- **React** - Biblioteca para construir interfaces
+- **React Router** - Roteamento entre páginas
+- **Styled Components** - CSS-in-JS para estilização
 
-### 🏠 Página Inicial
-- Exibe lista de restaurantes disponíveis
-- Cards com informações (nome, categoria, avaliação)
-- Navegação intuitiva
+## 📦 Dependências Principais
 
-### 🍴 Página do Restaurante
-- Menu completo com pratos
-- Descrição e preço de cada item
-- Adição ao carrinho em um clique
+```json
+{
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.x.x",
+  "styled-components": "^5.x.x"
+}
+```
 
-### 🛒 Carrinho de Compras
-- Gerenciamento com Redux
-- Visualização de itens selecionados
-- Cálculo automático de total
+## 🚀 Deploy
 
-### 📝 Checkout Validado
-**Etapa 1:** Dados de entrega
-**Etapa 2:** Dados de pagamento
-**Etapa 3:** Confirmação do pedido
-
----
-
-## 📜 Scripts Disponíveis
-
+### Opção 1: Vercel
 ```bash
-# Inicia servidor de desenvolvimento
-npm start
-
-# Mesmo que 'start' (alternativa)
-npm run dev
-
-# Compila e otimiza para produção
-npm run build
-
-# Visualiza build de produção localmente
-npm run preview
-
-# Verifica código com ESLint
-npm run lint
+npm install -g vercel
+vercel
 ```
 
----
+### Opção 2: Netlify
+```bash
+npm install -g netlify-cli
+netlify deploy
+```
 
-## 🔧 Build para Produção
-
+### Opção 3: GitHub Pages
 ```bash
 npm run build
 ```
 
-Isso criará uma pasta `dist/` com os arquivos otimizados prontos para deploy.
+## 📝 Licença
 
----
+Este projeto está sob a licença MIT.
 
-## 📲 Deploy
+## 👨‍💻 Autor
 
-A aplicação pode ser facilmente deployada em serviços como:
-
-- **Vercel** (recomendado para aplicações Vite/React)
-- **Netlify**
-- **GitHub Pages**
-- **AWS, Azure, ou qualquer host estático**
-
----
-
-## 💡 Padrões e Boas Práticas
-
-✅ Componentes funcionais com hooks
-✅ Tipagem forte com TypeScript
-✅ Gerenciamento de estado centralizado com Redux
-✅ Validação de formulários robusta
-✅ Código limpo e bem documentado
-✅ Responsividade mobile-first
-
----
+Desenvolvido como projeto educacional.
 
 ## 🤝 Contribuindo
 
-Sugestões e melhorias são bem-vindas! Sinta-se à vontade para:
-
-1. Fazer fork do projeto
-2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit as mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abrir um Pull Request
+Contribuições são bem-vindas! Sinta-se livre para abrir issues e pull requests.
 
 ---
 
-## 📄 Licença
-
-Este projeto é proprietário. Todos os direitos reservados.
-
----
-
-## 📞 Suporte
-
-Em caso de dúvidas ou problemas, abra uma issue no repositório.
-
-**Desenvolvido com ❤️ usando React + TypeScript**
+**Próximos passos:**
+1. Conectar a aplicação a uma API real
+2. Implementar sistema de autenticação
+3. Adicionar funcionalidade de carrinho persistente
+4. Integrar pagamento online
