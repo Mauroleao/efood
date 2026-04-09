@@ -6,14 +6,16 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--beige);
 `
 
 const Main = styled.main`
   flex: 1;
-  max-width: 1024px;
+  max-width: 1144px;
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
+  width: 100%;
 `
 
 function Layout({ children }) {

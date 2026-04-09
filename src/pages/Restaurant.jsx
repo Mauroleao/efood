@@ -1,36 +1,52 @@
 import styled from 'styled-components'
-import { useParams } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 
-const RestaurantHeader = styled.div`
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200') center/cover;
-  color: white;
-  padding: 60px 16px;
+const Banner = styled.img`
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
   margin-bottom: 32px;
   border-radius: 8px;
 `
 
+const RestaurantHeader = styled.div`
+  margin-bottom: 32px;
+`
+
 const RestaurantTitle = styled.h1`
-  font-size: 36px;
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: var(--dark);
+  font-weight: 700;
+`
+
+const RestaurantDescription = styled.p`
+  color: var(--text-light);
+  font-size: 14px;
   margin-bottom: 16px;
 `
 
-const RestaurantInfo = styled.div`
-  display: flex;
-  gap: 32px;
-  margin-bottom: 16px;
-
-  span {
-    font-size: 16px;
-  }
+const SectionTitle = styled.h2`
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: var(--dark);
+  font-weight: 700;
+  text-transform: capitalize;
 `
 
 const ProductsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 48px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const products = [
@@ -79,20 +95,20 @@ const products = [
 ]
 
 function Restaurant() {
-  const { id } = useParams()
-
   return (
     <div>
+      <Banner
+        src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200"
+        alt="Restaurante"
+      />
       <RestaurantHeader>
-        <RestaurantTitle>Restaurante #{id}</RestaurantTitle>
-        <RestaurantInfo>
-          <span>⭐ 4.8</span>
-          <span>🚚 30 min</span>
-          <span>💰 Frete: R$ 5,00</span>
-        </RestaurantInfo>
+        <RestaurantTitle>La Dolca Vita Trattoria</RestaurantTitle>
+        <RestaurantDescription>
+          ⭐ 4.8 (489 avaliações) • 🚚 30 min • R$ 5,00 de frete
+        </RestaurantDescription>
       </RestaurantHeader>
 
-      <h2 style={{ marginBottom: '24px' }}>Cardápio</h2>
+      <SectionTitle>Cardápio</SectionTitle>
       <ProductsContainer>
         {products.map((product) => (
           <ProductCard key={product.id} {...product} />

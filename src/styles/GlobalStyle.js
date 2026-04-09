@@ -7,10 +7,19 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  :root {
+    --coral: #E85C47;
+    --coral-light: #FFEAE1;
+    --dark: #333333;
+    --text-light: #999999;
+    --white: #ffffff;
+    --beige: #FAF1E7;
+  }
+
   body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: var(--beige);
+    color: var(--dark);
   }
 
   html, body, #root {

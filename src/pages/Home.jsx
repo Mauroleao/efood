@@ -4,15 +4,19 @@ import RestaurantCard from '../components/RestaurantCard'
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 48px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const restaurants = [
   {
     id: 1,
-    title: 'Pizzaria Bella Italia',
+    title: 'Pizza Dock',
     category: 'Italiana',
     rating: 4.8,
     deliveryTime: 30,
@@ -20,40 +24,40 @@ const restaurants = [
   },
   {
     id: 2,
-    title: 'Sushi Master',
-    category: 'Japonesa',
+    title: 'La Dolca Vita Trattoria',
+    category: 'Italiana',
     rating: 4.9,
     deliveryTime: 35,
     image: 'https://images.unsplash.com/photo-1564489551201-4f3f499dc1a6?w=600'
   },
   {
     id: 3,
-    title: 'Burger Premium',
-    category: 'Americana',
+    title: 'La Dolca Vita Trattoria',
+    category: 'Italiana',
     rating: 4.6,
     deliveryTime: 25,
     image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600'
   },
   {
     id: 4,
-    title: 'Churrascaria Grill',
-    category: 'Brasileira',
+    title: 'La Dolca Vita Trattoria',
+    category: 'Italiana',
     rating: 4.7,
     deliveryTime: 40,
     image: 'https://images.unsplash.com/photo-1555939594-58d7cb561370?w=600'
   },
   {
     id: 5,
-    title: 'Thai Express',
-    category: 'Tailandesa',
+    title: 'La Dolca Vita Trattoria',
+    category: 'Italiana',
     rating: 4.5,
     deliveryTime: 35,
     image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600'
   },
   {
     id: 6,
-    title: 'Taco Fiesta',
-    category: 'Mexicana',
+    title: 'La Dolca Vita Trattoria',
+    category: 'Italiana',
     rating: 4.4,
     deliveryTime: 28,
     image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600'

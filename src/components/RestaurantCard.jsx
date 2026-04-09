@@ -4,21 +4,21 @@ import { Link } from 'react-router-dom'
 const CardContainer = styled(Link)`
   display: block;
   text-decoration: none;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
 
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
 `
 
 const Image = styled.img`
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
 `
 
@@ -26,24 +26,50 @@ const Content = styled.div`
   padding: 16px;
 `
 
-const Title = styled.h3`
-  font-size: 18px;
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
   margin-bottom: 8px;
-  color: #333;
+`
+
+const Title = styled.h3`
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: var(--dark);
+  font-weight: 700;
+  flex: 1;
+`
+
+const Label = styled.span`
+  display: inline-block;
+  background-color: var(--coral);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-left: 8px;
+  white-space: nowrap;
 `
 
 const Category = styled.p`
-  color: #888;
-  font-size: 14px;
-  margin-bottom: 8px;
+  color: var(--text-light);
+  font-size: 12px;
+  margin-bottom: 12px;
 `
 
-const Rating = styled.div`
+const Info = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #e74c3c;
-  font-weight: bold;
+  font-size: 13px;
+  color: var(--dark);
+  font-weight: 600;
+`
+
+const Rating = styled.span`
+  color: var(--coral);
 `
 
 function RestaurantCard({ id, image, title, category, rating, deliveryTime }) {
@@ -51,12 +77,15 @@ function RestaurantCard({ id, image, title, category, rating, deliveryTime }) {
     <CardContainer to={`/restaurant/${id}`}>
       <Image src={image} alt={title} />
       <Content>
-        <Title>{title}</Title>
+        <Header>
+          <Title>{title}</Title>
+          <Label>Destaque</Label>
+        </Header>
         <Category>{category}</Category>
-        <Rating>
-          <span>⭐ {rating}</span>
+        <Info>
+          <Rating>⭐ {rating}</Rating>
           <span>{deliveryTime} min</span>
-        </Rating>
+        </Info>
       </Content>
     </CardContainer>
   )
