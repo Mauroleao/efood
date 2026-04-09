@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 

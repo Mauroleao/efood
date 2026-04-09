@@ -80,7 +80,7 @@ interface ProductCardProps {
   price: number
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ id, image, title, description, price }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ image, title, description, price }) => {
   const [addedToCart, setAddedToCart] = useState<boolean>(false)
 
   const handleAddToCart = (): void => {

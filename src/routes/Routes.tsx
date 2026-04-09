@@ -2,8 +2,8 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import GlobalStyle from '../styles/GlobalStyle'
 import Layout from '../components/Layout'
-import Home from '../pages/Home'
-import Restaurant from '../pages/Restaurant'
+import { Home } from '../pages/Home'
+import { Restaurant } from '../pages/Restaurant'
 import Checkout from '../pages/Checkout'
 
 const AppRoutes: React.FC = () => {
