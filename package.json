@@ -1,27 +1,8 @@
 {
   "name": "efood",
   "private": true,
-<<<<<<< HEAD
   "version": "0.0.0",
   "type": "module",
-=======
-  "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@types/styled-components": "^5.1.36",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "react-router-dom": "^7.14.0",
-    "react-scripts": "5.0.1",
-    "styled-components": "^6.3.12",
-    "typescript": "^6.0.2",
-    "web-vitals": "^2.1.4"
-  },
->>>>>>> 75e9fa66d63c4db81b4c4a175c0c6ff3aa11de88
   "scripts": {
     "start": "vite",
     "dev": "vite",

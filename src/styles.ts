@@ -15,13 +15,27 @@ export const Styles = createGlobalStyle`
         list-style: none;
       }
 
+      :root {
+        --coral: #E85C47;
+        --coral-light: #FFEAE1;
+        --dark: #333333;
+        --text-light: #999999;
+        --white: #ffffff;
+        --beige: #FAF1E7;
+      }
+
       body {
-      background-color: ${Colors.BackgroundColor};
-    }
+        background-color: ${Colors.BackgroundColor};
+        font-family: 'Roboto', sans-serif;
+        color: var(--dark);
+      }
 
-    .container {
-      max-width: 1024px;
-    }
+      html, body, #root {
+        height: 100%;
+        width: 100%;
+      }
 
-
+      .container {
+        max-width: 1024px;
+      }
 `
